@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module configVersion="1.2">
+
+	<!-- Module Properties -->
+	<id>conceptname</id>
+	<name>Concept Name Management Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.conceptname</package>
+	<author>cifechelobi</author>
+	<description>
+		Advanced Management of Concept Names
+	</description>
+	<updateURL>https://modules.openmrs.org/modules/download/conceptname/update.rdf</updateURL>
+	<require_version>1.8.0</require_version>
+<require_modules>
+	<require_module>org.openmrs.module.uiframework</require_module>
+	<require_module>org.openmrs.module.htmlformentry</require_module>
+</require_modules>
+	<!-- / Module Properties -->
+
+	
+	<!-- Module Activator -->
+	<activator>org.openmrs.module.conceptname.ConceptNameManagementActivator</activator>
+	
+	
+	<!-- Adds link to admin page -->
+	<aware_of_modules>
+		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
+	</aware_of_modules>		
+	<extension>
+		<point>org.openmrs.admin.list</point>
+		<class>org.openmrs.module.conceptname.extension.html.AdminList</class>
+	</extension>
+	<!-- Maps hibernate file's, if present -->
+	<mappingFiles>
+				
+	</mappingFiles>
+	<!-- Internationalization -->
+	<!-- All message codes should start with conceptname. -->
+	<messages>
+		<lang>en</lang>
+		<file>messages.properties</file>
+	</messages>
+	<messages>
+		<lang>fr</lang>
+		<file>messages_fr.properties</file>
+	</messages>
+	<messages>
+		<lang>es</lang>
+		<file>messages_es.properties</file>
+	</messages>
+	<!-- /Internationalization -->
+
+</module>
+
