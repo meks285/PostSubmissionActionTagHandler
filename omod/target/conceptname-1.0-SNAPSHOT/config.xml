@@ -4,12 +4,12 @@
 
 	<!-- Module Properties -->
 	<id>conceptname</id>
-	<name>Concept Name Management Module</name>
+	<name>Automatic Start and End Visit Module</name>
 	<version>1.0-SNAPSHOT</version>
 	<package>org.openmrs.module.conceptname</package>
-	<author>cifechelobi</author>
+	<author>Chukwuemeka Ifechelobi</author>
 	<description>
-		Advanced Management of Concept Names
+		Replaces the need to Manually Start and End Visit for every Encounter
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/conceptname/update.rdf</updateURL>
 	<require_version>1.8.0</require_version>

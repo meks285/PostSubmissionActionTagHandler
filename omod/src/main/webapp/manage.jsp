@@ -54,10 +54,19 @@
 PostSubmissionActionTagHandler pt = new PostSubmissionActionTagHandler();
 out.println("Patient Data Elements: <br/><br/>");
 out.println("Patient ID: "+pt.patientID+"<br/><br/>");
+out.println("Patient ID No Strings Attached: "+pt.patientIDdb+"<br/><br/>");
 out.println("Patient Location: "+pt.patientLocation+"<br/><br/>");
 out.println("Encounter ID: "+pt.encounterId+"<br/><br/>");
 out.println("Start Visit Date: "+pt.fromDate+"<br/><br/>");
 out.println("End Visit Date: "+pt.toDate+"<br/><br/>");
+out.println("<br/><br/>");
+out.println("Formatted Time Details: <br/><br/>");
+out.println("Start Visit Date: "+pt.fromDateStr+"<br/><br/>");
+out.println("Start Visit Date - Year: "+pt.fromDateStrYr+"<br/><br/>");
+out.println("Start Visit Date - Month: "+pt.fromDateStrMm+"<br/><br/>");
+out.println("Start Visit Date - Day: "+pt.fromDateStrDd+"<br/><br/>");
+out.println("Visit Date - From OpenMRS DB: "+pt.visitDate+"<br/><br/>");
+out.println("UUID - From OpenMRS: "+pt.visitUuid+"<br/><br/>");
 %>
 
 

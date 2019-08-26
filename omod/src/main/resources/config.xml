@@ -4,12 +4,12 @@
 
 	<!-- Module Properties -->
 	<id>${project.parent.artifactId}</id>
-	<name>${project.parent.name}</name>
+	<name>Automatic Start and End Visit Module</name>
 	<version>${project.parent.version}</version>
 	<package>${project.parent.groupId}.${project.parent.artifactId}</package>
-	<author>cifechelobi</author>
+	<author>Chukwuemeka Ifechelobi</author>
 	<description>
-		${project.parent.description}
+		Replaces the need to Manually Start and End Visit for every Encounter
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
 	<require_version>${openMRSVersion}</require_version>
