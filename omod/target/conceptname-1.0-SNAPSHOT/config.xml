@@ -5,11 +5,11 @@
 	<!-- Module Properties -->
 	<id>conceptname</id>
 	<name>Automatic Start and End Visit Module</name>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<package>org.openmrs.module.conceptname</package>
 	<author>Chukwuemeka Ifechelobi</author>
 	<description>
-		Replaces the need to Manually Start and End Visit for every Encounter
+		Replaces the need to Manually Start and End Visit for every Encounter. Implement by placing this Link <postSubmissionAction class="org.openmrs.module.conceptname.htmlformentry.PostSubmissionActionTagHandler"/> above the submit button of an Encounter Form
 	</description>
 	<updateURL>https://modules.openmrs.org/modules/download/conceptname/update.rdf</updateURL>
 	<require_version>1.8.0</require_version>
