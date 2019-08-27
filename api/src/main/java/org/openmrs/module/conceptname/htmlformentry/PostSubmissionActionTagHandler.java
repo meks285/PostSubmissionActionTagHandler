@@ -20,6 +20,11 @@ import org.openmrs.api.VisitService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.htmlformentry.CustomFormSubmissionAction;
 import org.openmrs.module.htmlformentry.FormEntrySession;
+// Database Connection String
+import org.openmrs.module.conceptname.htmlformentry.DBConnection;
+import org.openmrs.module.conceptname.htmlformentry.Utils;
+import org.openmrs.module.conceptname.htmlformentry.DBManager;
+
 
 /**
  * Usage example: <postSubmissionAction class="org.openmrs.module.xyz.DecideWhereToRedirect"/>
@@ -42,7 +47,7 @@ public class PostSubmissionActionTagHandler implements CustomFormSubmissionActio
 	public static String vType;
 	public static java.util.Date visitDate = null;
 	public static String visitUuid ="";
-
+	DBConnection openmrsConn;
 
     @Override
     public void applyAction(FormEntrySession session) {
@@ -85,8 +90,9 @@ public class PostSubmissionActionTagHandler implements CustomFormSubmissionActio
         
         try{
         	Class.forName("com.mysql.jdbc.Driver");
-
-        	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3316/openmrs","openmrs","3gZKlI9zZv~i");       
+        	
+        	openmrsConn = Utils.getNmrsConnectionDetails();      	
+        	Connection con=DriverManager.getConnection(openmrsConn.getUrl(),openmrsConn.getUsername(),openmrsConn.getPassword());       
         	Statement stmt=con.createStatement();
 
         	ResultSet rs=stmt.executeQuery("SELECT uuid, visit_id,patient_id,DATE_FORMAT(date_started, '%Y-%m-%d') as date_started FROM visit WHERE patient_id='"+patientIDdb+"' AND DATE_FORMAT(date_started, '%Y-%m-%d') = '"+fromDateStr+"'");
